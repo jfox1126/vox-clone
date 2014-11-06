@@ -1,0 +1,449 @@
+/*Reset Styling*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font: inherit;
+    font-size: 100%;
+    /*border: solid 1px;*/
+}
+
+/*Body styling + background image*/
+
+.background-img {
+	position: fixed; 
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  /*background-image: url("../img/mars-background.jpg");
+  background-size: cover;
+  height: 100%;
+  background-repeat: no-repeat;*/
+}
+
+/* Responisve Grid: 12 columns; */
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+.grid {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    /*border: solid 1px chocolate;*/
+}
+
+.row {
+    margin-bottom: 1em;
+    /*border: solid 1px chocolate;*/
+}
+
+.grid .row, [class*="-col"] {
+  padding: 0;
+  margin: 0;
+  /*border: solid 1px chocolate;*/
+}
+
+.grid:after, .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row {
+  margin-bottom: 1em;
+}
+
+.row:last-child {
+  margin-bottom: 0;
+}
+
+[class*="-col"] {
+  float: left;
+  margin-right: 1.5%;
+}
+
+[class*="-col"]:last-child {
+    margin-right: 0;
+}
+
+.one-col {
+  width: 6.958%;
+}
+
+.two-col {
+  width: 15.41%;
+}
+
+.three-col {
+  width: 23.87%;
+}
+
+.four-col {
+  width: 32.33%;
+}
+
+.five-col {
+  width: 40.79%;
+}
+
+.six-col {
+  width: 49.25%;
+}
+
+.seven-col {
+  width: 57.70%;
+}
+
+.eight-col {
+  width: 66.16%;
+}
+
+.nine-col {
+  width: 74.62%;
+}
+
+.ten-col {
+  width: 83.08%;
+}
+
+.eleven-col {
+  width: 91.54%;
+}
+
+.twelve-col {
+  width: 100%;
+}
+
+.one-offset {
+  margin-left: 8.458%;
+}
+
+.two-offset {
+  margin-left: 16.91%;
+}
+
+.three-offset {
+  margin-left: 25.37%;
+}
+
+.four-offset {
+  margin-left: 33.83%;
+}
+
+.five-offset {
+  margin-left: 42.29%;
+}
+
+.six-offset {
+  margin-left: 50.75%;
+}
+
+.seven-offset {
+  margin-left: 59.20%;
+}
+
+.eight-offset {
+  margin-left: 67.66%;
+}
+
+.nine-offset {
+  margin-left: 76.12%;
+}
+
+.ten-offset {
+  margin-left: 84.58%;
+}
+
+.eleven-offset {
+  margin-left: 91.54%;
+}
+
+/* Header */
+
+.top-header {
+	position: fixed;
+	width: 100%;
+	height: 4rem;
+	background: rgba(95,118,133,0.8);
+	color: #fff;
+	z-index: 1000;
+}
+
+.top-header .nav-bar {
+	position: absolute;
+	margin: -0.5rem 0 0 0;
+	top: 50%;
+	right: 2rem;
+	font-weight: normal;
+	font-size: .85rem;
+}
+
+header .vox-logo {
+	font-size: 2.5rem;
+	margin: .5rem 0 0 1.5rem;
+	font-style: italic;
+	font-weight: bolder;
+}
+
+header #hamburger {
+	display: none;
+	position: absolute;
+	top: 1.2rem;
+	left: 7.5rem;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+}
+ 
+header #hamburger div {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 2px 2px 2px 2px;
+    height: 3px;
+    margin-top: 5px;
+    width: 90%;
+}
+
+header a:link {
+	text-decoration: none;
+	color: white;
+}
+
+header a:visited {
+	text-decoration: none;
+	color: #fff;
+}
+
+header a:hover {
+	color: #fff200;
+}
+
+header .links > a {
+	padding: 0 .5rem;
+}
+
+header .share {
+	font-weight: 50;
+	text-transform: uppercase;
+}
+
+header .exit {
+	font-style: italic;
+}
+
+/* Grid Sytling */ 
+
+.grid {
+	position: relative;
+	top: 7rem;
+	margin-bottom: 2.6rem;
+	padding: 0 1rem;
+}
+
+.four-col {
+	position: fixed;
+	top: 7rem;
+}
+
+.seven-col {
+	float: right;
+}
+
+/* Sidebar*/
+
+.sidebar header {
+	background-color: #fff200;
+}
+
+.sidebar .content {
+	color: #222;
+	margin: 0;
+	padding: 30px 20px 30px 20px;
+}
+
+.sidebar h1 {
+	font-weight: 900;
+	font-size: 1.6rem;	
+	margin-bottom: 10px;
+}
+
+.sidebar summary {
+	font-size: .75rem;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.sidebar time {
+	font-size: .75rem;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.sidebar .navigation {
+	background: #313131;
+	color: #777;
+}
+
+.sidebar .nav-arrow {
+	background-color: #222;
+	font-size: 1.25em;
+	text-align: center;
+}
+
+.sidebar .card-list {
+	height: 17rem;
+	overflow-y: auto;
+}
+
+.sidebar .card-list>li {
+	margin: 1.5rem 1rem 1.5rem 2.5rem;
+	font-size: .9rem;
+	font-weight: 400;
+}
+
+.card-list .active {
+	color: #FFEB00;
+}
+
+/* Content-card header & footer */
+
+.card-header {
+	position: relative;
+	background: #fff200;
+	color: #777;
+	padding: .25em;
+}
+
+.card-footer {
+	position: relative;
+	color: #222;
+	padding: .25em;
+	border-top: solid 1px;
+	background: white;
+}
+
+.content-container .right {
+	position: absolute;
+	right: 7px;
+}
+
+.content-container .left{
+	position: absolute;
+	left: 7px;
+}
+
+.content-container .title {
+	margin-left: 40%;
+	font-size: 85%;
+	font-weight: bolder;
+	text-transform: uppercase;
+}
+
+.content-container .links {
+	font-size: 85%;
+	text-transform: uppercase;
+	margin-left: 32%;
+}
+
+.content-container .links > a {
+	padding: 0 .25rem;
+}
+
+/* Card-content */
+
+.row .card-content {
+	background-color: white;
+	padding: 2.5rem 4rem;
+}
+
+.content-container h1 {
+	font-weight: 900;
+	font-size: 1.6rem;
+	color: #4b4d4c;
+}
+
+.content-container p {
+	color: #5e605f;
+	font-size: 92%;
+	line-height: 1.7em;
+	margin: 1.5em 0;
+}
+
+.mars-planet {
+	float: right;
+	padding: 7px;
+	border: solid 1px #ddd;
+}
+
+/* Hyperlink stlying*/
+
+.grid a:link {
+	color: #6d98a8;
+	text-decoration: none;
+}
+
+.grid a:visited {
+	color: #6d98a8;
+	text-decoration: none;
+}
+
+.grid a:hover {
+	text-decoration: underline;
+}
+
+.content-container .left:hover {
+	color: #6d98a8;
+	cursor: pointer;
+}
+
+.content-container .right:hover {
+	color: #6d98a8;
+	cursor: pointer;
+}
+
+/* Mobile responsive grid */
+
+@media all and (max-width: 768px) {
+  [class*="-col"] {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .row:last-child > [class*="-col"]:last-child {
+    margin-bottom: 0;
+  }
+
+  [class*="-offset"] {
+    margin-left: 0;
+  }
+
+  .row {
+    margin: 0;
+  }
+
+  .four-col {
+  	display: none;
+  }
+
+  header #hamburger {
+  	display: inline;
+  }
+}
