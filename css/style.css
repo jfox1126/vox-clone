@@ -26,15 +26,26 @@ time, mark, audio, video {
 
 .background-img {
 	position: fixed; 
+	top: -50%; 
+	left: -50%; 
+	width: 200%; 
+  	height: 200%;
+}
+
+.background-img img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
-  /*background-image: url("../img/mars-background.jpg");
-  background-size: cover;
-  height: 100%;
-  background-repeat: no-repeat;*/
 }
 
 /* Responisve Grid: 12 columns; */
@@ -47,7 +58,6 @@ body {
     width: 100%;
     max-width: 1200px;
     height: auto;
-    /*border: solid 1px chocolate;*/
 }
 
 .row {
@@ -261,9 +271,11 @@ header .exit {
 .four-col {
 	position: fixed;
 	top: 7rem;
+	max-width: 388px;
 }
 
 .seven-col {
+	/*margin-left: 42.29%;*/
 	float: right;
 }
 
@@ -330,6 +342,7 @@ header .exit {
 	background: #fff200;
 	color: #777;
 	padding: .25em;
+	text-align: center;
 }
 
 .card-footer {
@@ -338,33 +351,54 @@ header .exit {
 	padding: .25em;
 	border-top: solid 1px;
 	background: white;
-}
-
-.content-container .right {
-	position: absolute;
-	right: 7px;
-}
-
-.content-container .left{
-	position: absolute;
-	left: 7px;
+	text-align: center;
 }
 
 .content-container .title {
-	margin-left: 40%;
 	font-size: 85%;
 	font-weight: bolder;
 	text-transform: uppercase;
 }
 
+.content-container .title::before {
+	content: '\27E8';
+	position: absolute;
+	left: 7px;
+	font-size: 150%;
+	top: 0;
+}
+
+.content-container .title::after {
+	content: '\27E9';
+	position: absolute;
+	right: 7px;
+	font-size: 150%;
+	top: 0;
+}
+
 .content-container .links {
 	font-size: 85%;
 	text-transform: uppercase;
-	margin-left: 32%;
 }
 
 .content-container .links > a {
 	padding: 0 .25rem;
+}
+
+.content-container .links::before {
+	content: '\27E8';
+	position: absolute;
+	left: 7px;
+	font-size: 150%;
+	top: 0;
+}
+
+.content-container .links::after {
+	content: '\27E9';
+	position: absolute;
+	right: 7px;
+	font-size: 150%;
+	top: 0;
 }
 
 /* Card-content */
@@ -391,35 +425,33 @@ header .exit {
 	float: right;
 	padding: 7px;
 	border: solid 1px #ddd;
+	margin: 0 .75rem;
 }
 
 /* Hyperlink stlying*/
 
 .grid a:link {
-	color: #6d98a8;
+	color: #5e605f;
 	text-decoration: none;
 }
 
 .grid a:visited {
-	color: #6d98a8;
+	color: #5e605f;
 	text-decoration: none;
 }
 
 .grid a:hover {
 	text-decoration: underline;
-}
-
-.content-container .left:hover {
 	color: #6d98a8;
-	cursor: pointer;
 }
 
-.content-container .right:hover {
-	color: #6d98a8;
-	cursor: pointer;
-}
+/* Mobile responsive */
 
-/* Mobile responsive grid */
+@media all and (max-width: 1050px) {
+	.seven-col {
+		width: 64%
+	}
+}
 
 @media all and (max-width: 768px) {
   [class*="-col"] {
@@ -446,4 +478,5 @@ header .exit {
   header #hamburger {
   	display: inline;
   }
+
 }

@@ -17,7 +17,7 @@
 
 <body>
 
-<header class="top-header">
+<header class="top-header" role="navigation">
 	<span class="vox-logo">
 		<a href="http://www.vox.com">Vox</a>
 		<span id="hamburger">
@@ -52,14 +52,14 @@
 	    <div class="row">
 	       <aside class="four-col sidebar">
 	       		<header class="sidebar header">
-	       			<section class="content">
+	       			<section class="content" role="contentinfo">
 	       				<h1>Everything you need to know about human exploration of Mars</h1>
 		       			<summary>By <a href="#">Joseph Stromberg</a></summary>
 		       			<time pubdate> Aug 6, 2014, 1:36p</time>
 	       			</section>
 	       		</header>
-	       		<section class="navigation">
-	       			<div class="nav-arrow up">+</div>
+	       		<section class="navigation" role="navigation">
+	       			<div class="nav-arrow up">&#9652</div>
 	       			<ol class="card-list">
 	       				<li class="active">Why do we care about Mars?</li>
 	       				<li>What is Mars like?</li>
@@ -81,16 +81,14 @@
 	       				<li>How have these cards changed?</li>
 	       				<li>Explore</li>
 	       			</ol>
-	       			<div class="nav-arrow down">-</div>
+	       			<div class="nav-arrow down">&#9662</div>
 	       		</section>
 	       </aside>
 	       <article class="seven-col one-offset content-container">
 	       		<header class="card-header">
-	       			<span class="left"><</span>
 	       			<span class="title">Card 1 of 19</span>
-	       			<span class="right">></span>
 	       		</header>
-	       		<div class="card-content">
+	       		<div class="card-content" role="article">
 	       			<h1>Why do we care about Mars?</h1>
 	       			<p>Mars is the fourth planet out from the sun in our solar system, and earthlings have been dreaming about going there for a very long time.</p>
 
@@ -109,7 +107,6 @@
         			<a href="http://nssdc.gsfc.nasa.gov/image/planetary/mars/marsglobe1.jpg">Nasa</a>
 	       		</div>
 	       		<footer class="card-footer">
-	       			<span class="left"><</span>
 	       			<span class="links">
 						<span class="share">Share this Card</span>
 						<a class="twitter" href="http://www.twitter.com">
@@ -122,11 +119,10 @@
 							<i class="fa fa-google-plus">
 							</i>
 						</a>
-						<a class="print">
+						<a class="print" href="#">
 							<i class="fa fa-print"></i>
 						</a>
 					</span>
-					<span class="right">></span>
 	       		</footer>
 	       </article>
 	    </div>
